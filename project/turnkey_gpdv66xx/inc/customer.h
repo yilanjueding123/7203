@@ -32,7 +32,7 @@
 #define GPDV_BOARD_VERSION				GPDV_EMU_V2_0
 
 // CPU and system clock
-#define INIT_MHZ                    	96.0//129.6//96		// MHz
+#define INIT_MHZ                    	120.0//129.6//96		// MHz
 
 // SDRAM size: 2MB(0x00200000), 8MB(0x00800000), 16MB(0x01000000), 32MB(0x02000000)
 #define SDRAM_SIZE						0x00200000//0x02000000

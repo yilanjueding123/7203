@@ -128,8 +128,8 @@ void system_set_pll(INT32U cpu_clock_mhz)
 			#else
 			 if (1)
 	        {
-				R_SYSTEM_PLLEN = 0x14;	// 96.0 MHz
-				//R_SYSTEM_PLLEN = 0x19;	//120.0 MHz
+				//R_SYSTEM_PLLEN = 0x14;	// 96.0 MHz
+				R_SYSTEM_PLLEN = 0x19;	//120.0 MHz
 				//R_SYSTEM_PLLEN = 0x1A;	//124.8 MHz
 				//R_SYSTEM_PLLEN = 0x1B;	//129.6 MHz
 				//R_SYSTEM_PLLEN = 0x1C;	//134.4 MHz
