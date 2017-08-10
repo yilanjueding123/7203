@@ -869,10 +869,10 @@ extern void Avi_RecStop(void);
 
 //video codec
 #define JPEG_ENC_PRIORITY		14
-#define AUD_ENC_PRIORITY		16
-#define AUD_REC_ENC_PRIORITY	17
+#define AUD_ENC_PRIORITY		15//16
+#define AUD_REC_ENC_PRIORITY	16//17
 #define USB_AUD_ENC_PRIORITY	11
-#define SCALER_PRIORITY			18
+#define SCALER_PRIORITY			17//18
 #define AVI_ENC_PRIORITY		20
 #define AVI_PACKER0_PRIORITY	22
 #define AVI_PACKER1_PRIORITY	24
@@ -882,7 +882,7 @@ extern void Avi_RecStop(void);
 #define AUDIO_DECODE_PRIORITY   18
 #define VIDEO_DECODE_PRIORITY	20
 #define VID_DEC_STATE_PRIORITY	22
-#define USB_CAM_PRIORITY        15  //add by erichan for usb cam
+#define USB_CAM_PRIORITY        18//15  //add by erichan for usb cam
 #define USB_AUDIO_PRIORITY      13
 
 #define STATE_HANDLING_PRIORITY	27

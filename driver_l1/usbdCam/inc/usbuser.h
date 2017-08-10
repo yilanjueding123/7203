@@ -41,7 +41,7 @@ extern void USB_Error_Event     (DWORD error);
 #define USB_EVT_OUT_DMA_ERR 12  /* DMA OUT EP - Error */
 #define USB_EVT_IN_DMA_ERR  13  /* DMA  IN EP - Error */
 
-#define EP7_MAX_PACKET      1024//96//192//96//0x1FE
+#define EP7_MAX_PACKET      512		// 512 for USB1.1, 1024 for USB2.0
 #define PAYLOAD_HEADER_SIZE 0x0C
 #define EP6_MAX_PACKET      192
 
@@ -87,6 +87,7 @@ extern unsigned char  *JPG_data;
 extern volatile BYTE  PicsToggle;
 //extern          BYTE SOF_Event_Buf[EP3_MAX_PACKET];
 extern          BYTE *SOF_Event_Buf;
+extern INT8U  uvc_still_image_trigger;
 
 extern BOOL UVC_GetCur(void);
 extern BOOL UVC_GetMin (void);

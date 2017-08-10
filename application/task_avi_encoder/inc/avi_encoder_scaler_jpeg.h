@@ -27,10 +27,10 @@
 #endif
 #define AVI_ENCODE_SCALER_BUFFER_NO		2	//scaler use buffer number
 #define AVI_ENCODE_DISPALY_BUFFER_NO	2	//display use buffer number
-#define AVI_ENCODE_VIDEO_BUFFER_NO		10//2	//jpeg encode use buffer number
+#define AVI_ENCODE_VIDEO_BUFFER_NO		8//2	//jpeg encode use buffer number
 #define AVI_ENCODE_PCM_BUFFER_NO		3	//audio record pcm use buffer number
 
-#define AVI_ENCODE_VIDEO_BUFFER_SIZE	(130*1024)//(160*1024)	//(120*1024) //jpeg encode use buffer size
+#define AVI_ENCODE_VIDEO_BUFFER_SIZE	(160*1024)	//(120*1024) //jpeg encode use buffer size
 //audio format	
 #define AVI_ENCODE_AUDIO_FORMAT			WAVE_FORMAT_PCM //0: no audio, WAVE_FORMAT_PCM, WAVE_FORMAT_IMA_ADPCM and WAVE_FORMAT_ADPCM 
 //audio encode buffer size

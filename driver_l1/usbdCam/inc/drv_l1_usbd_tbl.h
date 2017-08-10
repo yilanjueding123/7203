@@ -4,11 +4,12 @@
 //#if ((defined _DRV_L1_USBD) || (defined _DRV_L1_USBH)) && ((_DRV_L1_USBD == 1)||(_DRV_L1_USBH == 1))   //
 #if ((defined _DRV_L1_USBD) ) &&(_DRV_L1_USBD ==CUSTOM_ON) 
 //=====================================================================================================//
-
+#define INTERFACE_NUM_OFFSET 11
 static char Device_Descriptor_TBL[]={
      0x12,
  	 0x01,				        //bDescriptorType	: Device
-	 0x00, 0x02,				//bcdUSB			: version 2.00
+	 //0x00, 0x02,				//bcdUSB			: version 2.00
+	 0x10, 0x01,				//bcdUSB			: version 1.1
 	 0x00, 						//bDeviceClass
 	 0x00, 						//bDeviceSubClass
 	 0x00,						//bDeviceProtocol
@@ -22,6 +23,7 @@ static char Device_Descriptor_TBL[]={
 	 0x01,						//bNumConfigurations
 };
 
+#if 0
 static char Qualifier_Descriptor_TBL[]=
 {
 	0x0A,                   //bLength: 0x0A byte
@@ -34,7 +36,7 @@ static char Qualifier_Descriptor_TBL[]=
 	0x01,                   //bNumConfigurations: 1 configuration
 	0x00					//bReserved
 };
-
+#endif
 static char Config_Descriptor_TBL[] ={//Configuration (0x09 byte)
     0x09,                   //bLength: 0x09 byte
     0x02,                   //bDescriptorType: CONFIGURATION
@@ -43,8 +45,8 @@ static char Config_Descriptor_TBL[] ={//Configuration (0x09 byte)
     0x01,                   //bNumInterfaces: 1 interfaces
     0x01,                   //bConfigurationValue: configuration 1
     0x00,                   //iConfiguration: index of string
-    0x80,                   //bmAttributes: bus powered, Not Support Remote-Wakeup
-    0x32,                   //MaxPower: 100 mA
+    0xC0,                   //bmAttributes: self powered, Not Support Remote-Wakeup
+    0x64,                   //MaxPower: 200 mA
 // Interface_Descriptor
     0x09,                   //bLength: 0x09 byte
     0x04,                   //bDescriptorType: INTERFACE

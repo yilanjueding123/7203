@@ -116,4 +116,5 @@ extern INT32S usb_os_event_init(void);
 extern void usb_os_event_uninit(void);
 extern INT32S Drv_USBD_AUDIO_ISOIN_DMA_START(INT8U *buf, INT32U len);
 extern INT32S Drv_USBD_AudioISOI_DMA_Finish(void);
+extern INT32S usbd_uvc_still_image_trigger(INT8U event);
 
